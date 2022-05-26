@@ -45,6 +45,12 @@ namespace DPRN2A2U3
                     Console.WriteLine("{0} dividido entre 2 es {1}", value, DivideEntreDos(value));
                 }
 
+
+
+
+                Console.WriteLine(Divide(1, 0));
+
+
             }
             catch (NullReferenceException ex)
             {
@@ -61,44 +67,35 @@ namespace DPRN2A2U3
             catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
-            }          
-
-            Console.WriteLine(Divide(4, 2));
-
-        }
-
-        static int DivideEntreDos(int num)
-        {
-            try
-            {
-
-                return num / 2;
             }
+
 
             catch (IndexOutOfRangeException ex)
             {
                 Console.WriteLine(ex.Message);
-                return num / 2;
-
 
             }
 
-        }
-        static double Divide(int dividendo, int divisor)
-        {
-            try
-            {
-                return dividendo / divisor;
-
-            }
 
             catch (DivideByZeroException ex)
             {
                 Console.WriteLine(ex.Message);
 
-                return dividendo / divisor;
-
             }
+
+        }
+
+        static int DivideEntreDos(int num)
+        {
+
+            return num / 2;
+
+        }
+        static double Divide(int dividendo, int divisor)
+        {
+
+            return dividendo / divisor;
+
 
         }
 
