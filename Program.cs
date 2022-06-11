@@ -9,10 +9,7 @@ namespace DPRN2A2U3
     internal class Program
     {
         public static void Main()
-        {
-
-            try
-            {
+        {                       
                 var lista = new List<string>();
                 List<String> variantesCovid = new List<String>();
                 variantesCovid.InsertRange(0, new String[] { "alfa", "beta", "gama", "delta", "omicron", "psi" });
@@ -29,6 +26,7 @@ namespace DPRN2A2U3
 
                 for (int control = 0; control <= variantesCovid.Count; control++)
                     Console.Write("'{0}' ", variantesCovid[control]);
+
                 enteros5[enteros4.Length - 1] = enteros4[enteros4.Length - 1];
 
 
@@ -40,49 +38,13 @@ namespace DPRN2A2U3
                     Console.WriteLine(value);
 
                 foreach (var value in dividendos)
-
                 {
                     Console.WriteLine("{0} dividido entre 2 es {1}", value, DivideEntreDos(value));
                 }
 
 
-
-
-                Console.WriteLine(Divide(1, 0));
-
-
-            }
-            catch (NullReferenceException ex)
-            {
-                Console.WriteLine(ex.Message);
-
-            }
-
-            catch (ArgumentOutOfRangeException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
-            catch (IndexOutOfRangeException ex)
-            {
-                Console.WriteLine(ex.Message);
-
-            }
-
-
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine(ex.Message);
-
-            }
-
+                Console.WriteLine(Divide(1, 0));                         
+            
         }
 
         static int DivideEntreDos(int num)
@@ -91,6 +53,7 @@ namespace DPRN2A2U3
             return num / 2;
 
         }
+
         static double Divide(int dividendo, int divisor)
         {
 
